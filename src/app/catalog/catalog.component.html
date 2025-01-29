@@ -1,6 +1,5 @@
 <div class="container">
     <div class="filters">
-      
       <a class="button" (click)="filter='Heads'">Heads</a>
       <a class="button" (click)="filter='Arms'">Arms</a>
       <a class="button" (click)="filter='Torsos'">Torsos</a>
@@ -20,7 +19,7 @@
             </div>
           </div>
           <div class="price">
-            <div [hidden]="product.discount != 0"> {{ (product?.price ?? '0.00') | currency }}</div>
+            <div [class.strikethrough]="product.discount > 0"> {{ (product?.price ?? '0.00') | currency }}</div>
             <div [hidden]="product.discount === 0" class="discount">
                 {{(product.price * (1 - product.discount)) | currency}}
             </div>

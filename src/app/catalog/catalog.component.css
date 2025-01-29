@@ -2,10 +2,11 @@
     font-weight: bold;
   }
 
-  strikethrough {
+  .strikethrough {
     text-decoration: line-through;
     font-size: 18px;
   }
+  
   .container {
     display: flex;
     flex-direction: column;
