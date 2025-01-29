@@ -1,4 +1,12 @@
-.container {
+  a{
+    font-weight: bold;
+  }
+
+  strikethrough {
+    text-decoration: line-through;
+    font-size: 18px;
+  }
+  .container {
     display: flex;
     flex-direction: column;
   }
@@ -72,4 +80,9 @@
   .product .price button {
     padding: 10px;
     width: 100px;
+  }
+
+  .discount {
+    margin-top: -15px;
+    color:  #d25ca1;
   }
