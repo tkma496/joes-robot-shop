@@ -19,7 +19,8 @@
             </div>
           </div>
           <div class="price">
-            <div [class.strikethrough]="product.discount > 0"> {{ (product?.price ?? '0.00') | currency }}</div>
+            <div [ngStyle]="{'color': product.discount != 0 ? 'red':''}"  
+                 [ngClass]="getDiscountedClasses(product)"> {{ (product?.price ?? '0.00') | currency }}</div>
             <div [hidden]="product.discount === 0" class="discount">
                 {{(product.price * (1 - product.discount)) | currency}}
             </div>
