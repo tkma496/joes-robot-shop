@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IProduct } from './product.model';
-
+import { ProductDetailsComponent} from '../product-details/product-details.component';
+import { CartService } from '../cart.service';
 @Component({
   selector: 'app-catalog',
   templateUrl: './catalog.component.html',
@@ -10,7 +11,7 @@ export class CatalogComponent {
   products: IProduct[];
   filter: string = '';
 
-  constructor() {
+  constructor(private cartSvc: CartService) {
     this.products = [
       {
         id: 1,
@@ -188,9 +189,8 @@ export class CatalogComponent {
     ];
   }
 
-  getImageUrl(product:IProduct) {
-    if (!product) return '';
-    return '/assets/images/robot-parts/' + product.imageName;
+  addToCart(product:IProduct) {
+    this.cartSvc.add(product)
   }
 
   getFilteredProducts() {
@@ -199,13 +199,5 @@ export class CatalogComponent {
       : this.products.filter((product) => product.category === this.filter);
   }
 
-  getDiscountedClasses(product:IProduct) {
-    if(product.discount != 0)
-    {
-      return "strikethrough";
-    }
-    else {
-      return "bold";
-    }
-  }
+
 }
