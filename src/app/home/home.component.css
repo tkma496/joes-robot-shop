@@ -67,6 +67,15 @@
     background-color: #888;
   }
   
+  .part-image {
+    transition: border 0.3s ease; /* Smooth transition for the border */
+  }
+    
+  .part:hover .part-image {
+    outline: 3px solid #ff0000; /* Red outline on hover */
+    outline-offset: -3px; /* Ensures the outline is drawn inside the element */
+  }
+ 
   .white-paper {
     display: flex;
     height: 100%;
