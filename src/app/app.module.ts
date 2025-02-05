@@ -11,6 +11,7 @@ import { CartComponent } from './cart/cart.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SignInComponent } from './user/sign-in/sign-in.component';
 import { FormsModule } from '@angular/forms';
+import { TemplateFormControlsComponent } from './template-form-controls/template-form-controls.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     SiteHeaderComponent,
     ProductDetailsComponent,
     CartComponent,
-    SignInComponent
+    SignInComponent,
+    TemplateFormControlsComponent
   ],
   imports: [
     BrowserModule,
