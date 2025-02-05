@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'catalog/:filter', component: CatalogComponent, title: "Catalog - Joe's Robot Shop" },*/
   { path: 'cart', component: CartComponent, title: "Cart - Joe's Robot Shop" },
   { path: 'sign-in', component: SignInComponent, title: "Sign-In - Joe's Robot Shop" },
-  { path: 'form-controls', component: TemplateFormControlsComponent}
+  { path: 'form-controls', component: TemplateFormControlsComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
